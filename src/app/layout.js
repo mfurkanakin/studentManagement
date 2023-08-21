@@ -1,6 +1,7 @@
 import Sidebar from './components/sidebar/sidebar'
+import MainPart from './components/mainPart/mainPart'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Content, Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +14,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Sidebar />
+        <div className='row'>
+        <div>
+          <Sidebar />
+        </div>
+        <div>
+          <MainPart />
+        </div>
+        </div>
+
         {children}
         </body>
     </html>
